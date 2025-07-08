@@ -1,108 +1,75 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bhawana Joshi | Cloud & IT Manager</title>
+  <meta charset="UTF-8">
+  <title>My Professional Profile</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .tab {
+      overflow: hidden;
+      border-bottom: 2px solid #ccc;
     }
-    header {
-      background-color: #004080;
-      color: white;
-      padding: 2rem;
-      text-align: center;
+    .tab button {
+      background-color: inherit;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 20px;
+      transition: 0.3s;
+      font-size: 16px;
     }
-    section {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
+    .tab button:hover {
+      background-color: #ddd;
     }
-    h1, h2 {
-      color: #004080;
+    .tab button.active {
+      border-bottom: 2px solid #000;
+      font-weight: bold;
     }
-    .button {
-      background-color: #004080;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      display: inline-block;
-      margin-top: 1rem;
-    }
-    footer {
-      background-color: #f1f1f1;
-      padding: 1rem;
-      text-align: center;
-      font-size: 0.9rem;
+    .tabcontent {
+      display: none;
+      padding: 20px 0;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Bhawana Joshi</h1>
-    <p>Cloud Operations Manager | IT Leader | Azure & M365 Expert</p>
-    <a class="button" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank">Connect on LinkedIn</a>
-  </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I’m an experienced IT Manager with 8+ years in technology leadership roles and a strong focus on Microsoft Azure, M365, Entra ID, and cyber security. I currently lead IT operations and digital transformation initiatives at Herenga ā Nuku Aotearoa.
-    </p>
+<h2>Welcome to My Website</h2>
 
-    <h2>Skills</h2>
-    <ul>
-      <li>Cloud Platforms: Microsoft Azure (IaaS, PaaS, SaaS)</li>
-      <li>Modern Workplace: Microsoft 365, Intune, SharePoint Online</li>
-      <li>Security: Conditional Access, PIM, Zero Trust</li>
-      <li>Tools: Jira, ServiceNow, PowerShell, Sentinel</li>
-      <li>People Leadership & Vendor Management</li>
-    </ul>
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Work')" id="defaultOpen">Work Experience</button>
+  <button class="tablinks" onclick="openTab(event, 'Projects')">Project Experience</button>
+</div>
 
-    <h2>Certifications</h2>
-    <ul>
-      <li>Microsoft 365 Certified: Administrator Expert</li>
-      <li>Azure Security Engineer Associate</li>
-      <li>Endpoint Administrator Associate</li>
-    </ul>
+<div id="Work" class="tabcontent">
+  <h3>Work Experience</h3>
+  <p><strong>IT Manager – Herenga ā Nuku</strong><br>Led digital transformation, IT operations, and strategic cloud migration projects.</p>
+  <p><strong>IT Lead – Human Rights Commission</strong><br>Managed infrastructure upgrade, office relocation, and M365 rollout.</p>
+</div>
 
-    <h2>Get in Touch</h2>
-    <p>Email: bhawana.joshi.ramgarh@email.com</p>
-    <p>Based in: Wellington, New Zealand</p>
-  </section>
+<div id="Projects" class="tabcontent">
+  <h3>Project Experience</h3>
+  <p><strong>Rebranding Project (Herenga ā Nuku)</strong><br>Oversaw domain migration, branding updates across Microsoft services.</p>
+  <p><strong>Office Move Project (Human Rights Commission)</strong><br>Planned and executed seamless IT relocation with no downtime.</p>
+</div>
 
-  <footer>
-    &copy; 2025 Bhawana Joshi | Portfolio Website
-  </footer>
+<script>
+  function openTab(evt, tabName) {
+    const contents = document.getElementsByClassName("tabcontent");
+    for (let i = 0; i < contents.length; i++) {
+      contents[i].style.display = "none";
+    }
+
+    const links = document.getElementsByClassName("tablinks");
+    for (let i = 0; i < links.length; i++) {
+      links[i].className = links[i].className.replace(" active", "");
+    }
+
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  document.getElementById("defaultOpen").click();
+</script>
+
 </body>
-  <h2>Work Experience</h2>
-<ul>
-  <li><strong>IT Manager – Herenga ā Nuku Aotearoa (2022–Present)</strong><br>
-  Led Microsoft 365 migration, SharePoint structure setup, and rebranding with domain transition.</li>
-  
-  <li><strong>Senior IT Advisor – Human Rights Commission (2019–2022)</strong><br>
-  Managed major office move, AV setup, and internal systems integration project.</li>
-</ul>
-
-<h2>Major Projects</h2>
-<ul>
-  <li><strong>Rebranding Project – Herenga ā Nuku</strong><br>
-  Led domain change, email aliases, SharePoint restructure, and staff training.</li>
-
-  <li><strong>Office Relocation – Human Rights Commission</strong><br>
-  Managed entire ICT move, vendor coordination, telephony setup, and post-move support.</li>
-</ul>
-
-<h2>Contact</h2>
-<p>Email: yourname@example.com<br>
-Phone: +64 21 123 4567<br>
-LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">View Profile</a></p>
-
 </html>
